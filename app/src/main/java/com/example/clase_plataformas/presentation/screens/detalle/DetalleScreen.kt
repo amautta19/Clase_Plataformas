@@ -3,9 +3,11 @@ package com.example.clase_plataformas.presentation.screens.detalle
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material3.Icon
@@ -44,6 +46,7 @@ fun DetalleScreen(){
                 tint = Color(0xFF3823A8),
                 modifier = Modifier.size(14.dp)
             )
+            Spacer(modifier = Modifier.width(4.dp))
             Text(
                 text = "Gabriel García Márquez",
                 fontSize = 14.sp,
