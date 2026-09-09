@@ -1,5 +1,6 @@
 package com.example.clase_plataformas.presentation.common
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -33,7 +34,7 @@ private fun InfoCard(
     Card(
         shape = RoundedCornerShape(14.dp),
         colors = CardDefaults.cardColors(containerColor = Color.White),
-        border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFEAEAF5)),
+        border = BorderStroke(1.dp, Color(0xFFEAEAF5)),
         modifier = modifier
     ) {
         Row(
