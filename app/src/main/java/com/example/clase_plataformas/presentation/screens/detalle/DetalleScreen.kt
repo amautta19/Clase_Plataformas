@@ -122,7 +122,7 @@ fun DetalleScreen(){
         Surface(
             shape = RoundedCornerShape(12.dp),
             color = Color(0xFFF3F2FE),
-            border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFFE2E0FD)),
+            border = BorderStroke(1.dp, Color(0xFFE2E0FD)),
             modifier = Modifier.fillMaxWidth()
         ) {
             Row(
