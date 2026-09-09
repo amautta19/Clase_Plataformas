@@ -1,5 +1,6 @@
 package com.example.clase_plataformas.presentation.screens.detalle
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -20,6 +21,7 @@ import androidx.compose.material.icons.automirrored.outlined.Label
 import androidx.compose.material.icons.filled.Book
 import androidx.compose.material.icons.outlined.DateRange
 import androidx.compose.material.icons.outlined.Edit
+import androidx.compose.material.icons.outlined.Menu
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
@@ -33,11 +35,13 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.clase_plataformas.R
 import com.example.clase_plataformas.presentation.common.CuadroInfo
 import com.example.clase_plataformas.presentation.common.InfoCard
+import com.example.clase_plataformas.presentation.common.MetaBadge
 
 @Composable
 fun DetalleScreen(){
@@ -152,5 +156,66 @@ fun DetalleScreen(){
 
         Spacer(modifier = Modifier.height(12.dp))
 
+        val primaryNavy = Color(0xFF101140)
+
+        // Sección Descripción / Sinopsis
+        Card(
+            shape = RoundedCornerShape(16.dp),
+            colors = CardDefaults.cardColors(containerColor = Color.White),
+            border = BorderStroke(1.dp, Color(0xFFEAEAF5)),
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Column(modifier = Modifier.padding(16.dp)) {
+                // Header Descripción
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Icon(
+                            imageVector = Icons.Outlined.Menu,
+                            contentDescription = null,
+                            tint = primaryNavy,
+                            modifier = Modifier.size(18.dp)
+                        )
+                        Spacer(modifier = Modifier.width(8.dp))
+                        Text(
+                            text = "Descripción",
+                            fontSize = 16.sp,
+                            fontWeight = FontWeight.Bold,
+                            color = primaryNavy
+                        )
+                    }
+                    Text(
+                        text = "SINOPSIS OFICIAL",
+                        fontSize = 10.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color(0xFF7D7F99)
+                    )
+                }
+
+                Spacer(modifier = Modifier.height(12.dp))
+
+                // Texto Justificado/Largo
+                Text(
+                    text = "La monumental obra de Gabriel García Márquez narra las siete generaciones de la estirpe Buendía en la mítica aldea de Macondo. Con una maestría estilística inigualable, la novela entrelaza lo fantástico con la realidad sociopolítica de América Latina, explorando la soledad, el destino circular y los amores prohibidos que marcan para siempre la memoria cultural hispanoamericana.",
+                    fontSize = 12.sp,
+                    color = Color(0xFF555B6E),
+                    lineHeight = 18.sp,
+                    textAlign = TextAlign.Justify
+                )
+
+                Spacer(modifier = Modifier.height(16.dp))
+
+                // Metadata Chips
+                Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    MetaBadge(text = "ISBN: 978-0307474728")
+                    MetaBadge(text = "496 Páginas")
+                }
+                Spacer(modifier = Modifier.height(6.dp))
+                MetaBadge(text = "Idioma: Español")
+            }
+        }
     }
 }
