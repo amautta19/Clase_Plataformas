@@ -1,6 +1,5 @@
 package com.example.clase_plataformas.presentation.screens.detalle
 
-import android.widget.Space
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
