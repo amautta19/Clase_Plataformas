@@ -25,7 +25,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-private fun InfoCard(
+fun InfoCard(
     icon: ImageVector,
     label: String,
     value: String,
