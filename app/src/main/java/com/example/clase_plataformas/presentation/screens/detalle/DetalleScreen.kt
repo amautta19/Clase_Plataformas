@@ -2,17 +2,21 @@ package com.example.clase_plataformas.presentation.screens.detalle
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.outlined.Label
 import androidx.compose.material.icons.filled.Book
+import androidx.compose.material.icons.outlined.DateRange
 import androidx.compose.material.icons.outlined.Edit
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
@@ -30,6 +34,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.clase_plataformas.R
 import com.example.clase_plataformas.presentation.common.CuadroInfo
+import com.example.clase_plataformas.presentation.common.InfoCard
 
 @Composable
 fun DetalleScreen(){
@@ -80,6 +85,27 @@ fun DetalleScreen(){
                 fontSize = 14.sp,
                 color = Color(0xFF555B6E),
                 fontWeight = FontWeight.Medium
+            )
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        // 2 Tarjetas
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(12.dp) // Espacio entre cada elemento del ROW
+        ) {
+            InfoCard(
+                icon = Icons.Outlined.DateRange,
+                label = "Publicación",
+                value = "1967",
+                modifier = Modifier.weight(1f)
+            )
+            InfoCard(
+                icon = Icons.AutoMirrored.Outlined.Label,
+                label = "Género",
+                value = "Realismo M...",
+                modifier = Modifier.weight(1f)
             )
         }
     }
