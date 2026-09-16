@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import com.example.clase_plataformas.presentation.screens.detalle.DetalleScreen
+import com.example.clase_plataformas.presentation.screens.examen_molina.CVScreen
 import com.example.clase_plataformas.ui.theme.Clase_PlataformasTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -15,7 +16,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             Clase_PlataformasTheme {
-                DetalleScreen()
+                //DetalleScreen()
+                CVScreen()
             }
         }
     }
