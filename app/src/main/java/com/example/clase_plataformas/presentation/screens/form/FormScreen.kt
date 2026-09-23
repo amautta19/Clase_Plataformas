@@ -13,6 +13,7 @@ import androidx.compose.material.icons.filled.Description
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.PersonPin
+import androidx.compose.material3.Button
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedTextField
@@ -70,6 +71,10 @@ fun FormScreen(){
                 leadingIcon = { Icon(Icons.Default.Description, "") },
                 minLines = 3
             )
+            Button(
+                onClick = {},
+                modifier = Modifier.fillMaxWidth()
+            ) { Text("Guardar") }
         }
     }
 }
