@@ -11,7 +11,6 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.rememberNavController
 import com.example.clase_plataformas.presentation.common.AppScaffold
 import com.example.clase_plataformas.presentation.navigation.AppNavigation
-import com.example.clase_plataformas.presentation.screens.detalle.DetalleScreen
 import com.example.clase_plataformas.ui.theme.Clase_PlataformasTheme
 import dagger.hilt.android.AndroidEntryPoint
 
