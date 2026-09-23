@@ -8,6 +8,7 @@ import androidx.navigation.NavHostController
 @Composable
 fun AppScaffold(navController: NavHostController, content: @Composable (PaddingValues)->Unit){
     Scaffold(
+        topBar = {AppTopBar(navController)},
         bottomBar = {  AppBottomBar(navController)}
     ) {
         paddingValues ->
