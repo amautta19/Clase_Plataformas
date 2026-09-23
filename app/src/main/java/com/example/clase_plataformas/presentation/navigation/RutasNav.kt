@@ -6,7 +6,7 @@ object RutasNav {
     const val BUSCAR = "buscar"
     const val DETALLE = "detalle/{id}"  // Acá es obligatorio
 
-    fun getTitulo(ruta: String): String{
+    fun getTitulo(ruta: String?): String{
         return when{
             ruta == INICIO -> "Catálogo Académico"
             ruta?.startsWith("form") == true -> "Formulario Libro"
