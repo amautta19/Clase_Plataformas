@@ -11,14 +11,21 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Book
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import com.example.clase_plataformas.presentation.common.CuadroInfo
 import com.example.clase_plataformas.presentation.common.LibroItem
 
 @Composable
-fun InicioScreen(){
+fun InicioScreen(viewModel: InicioViewModel = hiltViewModel()){
+
+    LaunchedEffect(Unit) {
+        viewModel.cargarLibros()
+    }
+
     Column(modifier = Modifier.fillMaxWidth().padding(top = 20.dp, bottom = 10.dp)){
         Row(
             modifier = Modifier.fillMaxWidth().padding(end = 10.dp),
