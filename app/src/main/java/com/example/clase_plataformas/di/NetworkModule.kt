@@ -1,6 +1,8 @@
 package com.example.clase_plataformas.di
 
 import com.example.clase_plataformas.data.remote.api.LibroApiService
+import com.example.clase_plataformas.data.repository.LibroRepositoryImpl
+import com.example.clase_plataformas.domain.repository.LibroRepository
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -40,6 +42,13 @@ object NetworkModule {
     @Singleton
     fun provideLibroApiService(@LibrosRetrofit retrofit: Retrofit) : LibroApiService{
         return retrofit.create(LibroApiService::class.java)
+    }
+
+    //Repositorio
+    @Provides
+    @Singleton
+    fun provideLibroRepository(libroApiService: LibroApiService) : LibroRepository{
+        return LibroRepositoryImpl(libroApiService)
     }
 
 }
