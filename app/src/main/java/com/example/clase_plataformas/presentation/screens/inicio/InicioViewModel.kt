@@ -17,7 +17,7 @@ class InicioViewModel @Inject constructor(
         viewModelScope.launch {
             getLibrosUseCase()
                 .onSuccess { libros ->
-                    Log.d("==>","hola")
+                    Log.d("==>",libros.toString())
                 }
         }
     }
