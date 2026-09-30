@@ -9,7 +9,7 @@ class LibroRepositoryImpl @Inject constructor(
     private val apiLibro : LibroApiService) : LibroRepository {
     override suspend fun getLibros(): Result<List<Libro>> = runCatching{
         val response = apiLibro.getLibros()
-        if(response.sucess){
+        if(response.success){
             response.data.items.map { it.toDomain() }
         } else {
             throw Exception("Error en la respuesta del servidor")
